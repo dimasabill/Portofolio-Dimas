@@ -1,74 +1,84 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
+import getolImg from '../assets/getol.png';
+import memoryImg from '../assets/memory.png';
+import ifannoImg from '../assets/ifanno.png';
 import './Projects.css';
 
 const Projects = () => {
   const projects = [
     {
       title: "Getol App",
-      category: "Location-Based Marketplace",
-      image: "/getol.png",
-      color: "#3b82f6",
-      link: "https://getol.mattoworks.com/"
+      desc: "Location-Based Marketplace.",
+      image: getolImg,
+      tags: ["HTML", "CSS", "JavaScript", "React"],
+      demo: "https://getol.mattoworks.com/",
+      github: "#"
     },
     {
       title: "Memory-Ai",
-      category: "AI Web Application",
-      image: "/memory.png",
-      color: "#8b5cf6",
-      link: "#"
+      desc: "AI Web Application.",
+      image: memoryImg, 
+      tags: ["HTML", "CSS", "JavaScript", "API"],
+      demo: "#",
+      github: "#"
     },
     {
       title: "Ifanno Footwear",
-      category: "Premium E-Commerce",
-      image: "/ifanno.png",
-      color: "#10b981",
-      link: "https://ifanno-footwear.vercel.app/"
+      desc: "Premium E-Commerce.",
+      image: ifannoImg,
+      tags: ["HTML", "CSS", "JavaScript"],
+      demo: "https://ifanno-footwear.vercel.app/",
+      github: "#"
     }
   ];
 
   return (
     <section id="projects" className="projects section-padding">
       <div className="container">
-        <motion.div 
-          className="section-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="section-title">Selected Work.</h2>
-          <p className="section-desc">
-            A collection of projects showcasing my focus on clean code, 
-            intuitive design, and performant architectures.
-          </p>
-        </motion.div>
+        <div className="section-title">
+          <h2>Projects</h2>
+          <a href="#" className="view-all">View All &rarr;</a>
+        </div>
 
         <div className="projects-grid">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              className={`project-card ${index === 0 ? 'large' : ''}`}
-              initial={{ opacity: 0, y: 40 }}
+              className="project-card card-shadow"
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="project-image-wrapper">
-                <img src={project.image} alt={project.title} className="project-image" />
-                <div className="project-overlay">
-                  <a href={project.link || "#"} target={project.link !== "#" ? "_blank" : "_self"} rel="noopener noreferrer" className="project-link">
-                    View Project <ArrowUpRight size={20} />
+              <div className="project-img-container">
+                <img src={project.image} alt={project.title} className="project-img" />
+              </div>
+              
+              <div className="project-content">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-desc">{project.desc}</p>
+                
+                <div className="project-tags">
+                  {project.tags.map((tag, i) => (
+                    <span key={i} className="tag">{tag}</span>
+                  ))}
+                </div>
+                
+                <div className="project-links">
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <ExternalLink size={16} /> Live Demo
+                  </a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <FaGithub size={16} /> GitHub
                   </a>
                 </div>
-              </div>
-              <div className="project-info">
-                <p className="project-category" style={{ color: project.color }}>{project.category}</p>
-                <h3 className="project-title">{project.title}</h3>
               </div>
             </motion.div>
           ))}
         </div>
+        
       </div>
     </section>
   );

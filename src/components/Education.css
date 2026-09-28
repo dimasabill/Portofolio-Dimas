@@ -1,0 +1,44 @@
+.education {
+  background-color: var(--bg-main);
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.edu-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #EFF6FF; /* Blue 50 */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.school-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.school-major {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.school-year {
+  font-size: 0.9rem;
+  color: #94A3B8; /* Slate 400 */
+}

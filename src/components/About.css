@@ -1,64 +1,75 @@
-.section-padding {
-  padding: 8rem 0;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-.section-header {
-  margin-bottom: 4rem;
-  max-width: 700px;
+@media (min-width: 992px) {
+  .about-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+  }
 }
 
-.section-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: var(--text-main);
+.about-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
-.section-desc {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  font-weight: 300;
-}
-
-.skills-grid {
+.about-info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
 }
 
-.skill-card {
-  padding: 2.5rem 2rem;
-  border-radius: 16px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  position: relative;
-  overflow: hidden;
+@media (min-width: 576px) {
+  .about-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.2);
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-.skill-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: var(--bg-main);
+.info-icon {
+  color: var(--accent);
+  background-color: #EFF6FF; /* Blue 50 */
+  padding: 0.5rem;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  border: 1px solid var(--border);
 }
 
-.skill-title {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+.info-label {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-main);
+  margin-bottom: 0.25rem;
 }
 
-.skill-desc {
-  font-size: 0.95rem;
+.info-value {
+  font-size: 0.9rem;
   color: var(--text-muted);
-  line-height: 1.6;
+}
+
+.about-image {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.workspace-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
 }

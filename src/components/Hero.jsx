@@ -1,55 +1,43 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { Download, Eye } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section id="home" className="hero">
-      {/* Abstract background element */}
-      <div className="glow-orb"></div>
-      
-      <div className="container hero-content">
+      <div className="container hero-container">
+        
         <motion.div 
-          className="hero-badge"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className="hero-content"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="dot"></span> Available for new opportunities
-        </motion.div>
+          <h1 className="hero-title">
+            Administrative & <br />
+            <span className="text-accent">Web Developer</span>
+          </h1>
+          <p className="hero-desc">
+            A dedicated professional bridging the gap between efficient administrative operations 
+            and modern web technologies. I specialize in developing structured digital solutions, 
+            managing complex data workflows, and leveraging innovative tools to drive organizational success.
+          </p>
+          
+          <div className="hero-actions">
+            <a href="CV_Dimas_Abil_Fasha.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <Download size={18} /> Download CV
+            </a>
+            <a href="#projects" className="btn-outline">
+              <Eye size={18} /> View Projects
+            </a>
+          </div>
 
-        <motion.h1 
-          className="hero-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        >
-          Creative Developer <br />
-          <span className="text-outline">Building Digital</span> <br />
-          Experiences.
-        </motion.h1>
-
-        <motion.p 
-          className="hero-subtitle"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          Hi, I'm Dimas. I specialize in crafting modern, high-performance web applications with a focus on aesthetics and user experience.
-        </motion.p>
-
-        <motion.div 
-          className="hero-actions"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-        >
-          <a href="#projects" className="btn-primary">
-            View Work <ArrowUpRight size={18} />
-          </a>
-          <a href="#contact" className="btn-secondary">
-            Contact Me
-          </a>
+          <div className="hero-socials">
+            <a href="https://github.com/dimasabill" target="_blank" rel="noopener noreferrer"><FaGithub size={20} /></a>
+            <a href="https://linkedin.com/in/dimas-abil-fasha" target="_blank" rel="noopener noreferrer"><FaLinkedin size={20} /></a>
+            <a href="mailto:dimasabilfasha@gmail.com"><FaEnvelope size={20} /></a>
+          </div>
         </motion.div>
       </div>
     </section>

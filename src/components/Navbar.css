@@ -6,12 +6,14 @@
   padding: 1.5rem 0;
   z-index: 100;
   transition: all 0.4s ease;
-  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  color: var(--hero-text);
 }
 
 .navbar.scrolled {
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  background-color: var(--hero-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
@@ -22,21 +24,16 @@
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-}
-
-.logo span {
-  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .nav-links {
   display: none;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .nav-links {
     display: flex;
   }
@@ -45,40 +42,33 @@
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: #CBD5E1; /* Slate 300 */
   position: relative;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: var(--accent);
-  transition: width 0.3s ease;
-}
-
 .nav-links a:hover {
-  color: var(--text-main);
+  color: #FFFFFF;
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-cta {
+.btn-download-nav {
+  display: none;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.6rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  background: transparent;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
-.nav-cta:hover {
-  background: var(--text-main);
-  color: var(--bg-main);
+@media (min-width: 992px) {
+  .btn-download-nav {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.btn-download-nav:hover {
+  background: var(--accent-hover);
+  color: #fff;
 }
