@@ -26,6 +26,16 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
+  z-index: 101;
+}
+
+.mobile-menu-btn {
+  display: block;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  z-index: 101;
 }
 
 .nav-links {
@@ -34,9 +44,37 @@
 }
 
 @media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+  
   .nav-links {
     display: flex;
   }
+}
+
+/* Mobile Menu Styles */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--hero-bg);
+  padding: 1.5rem 2rem 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-links.open a {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.navbar.mobile-open {
+  background-color: var(--hero-bg);
 }
 
 .nav-links a {

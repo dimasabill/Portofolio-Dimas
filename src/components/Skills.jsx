@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code2, Briefcase, FileCode2, Paintbrush, Database, FileText, CheckCircle2 } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = ({ id = "skills", title = "Skills" }) => {
@@ -7,15 +8,14 @@ const Skills = ({ id = "skills", title = "Skills" }) => {
     { name: "HTML", icon: <FileCode2 size={18} color="#E34F26" /> },
     { name: "CSS", icon: <Paintbrush size={18} color="#1572B6" /> },
     { name: "JavaScript", icon: <FileCode2 size={18} color="#F7DF1E" /> },
-    { name: "Git & GitHub", icon: <Database size={18} color="#181717" /> },
+    { name: "GitHub", icon: <FaGithub size={18} color="#181717" /> },
     { name: "Responsive Web Design", icon: <Code2 size={18} color="#38BDF8" /> },
-    { name: "Microsoft Office", icon: <Briefcase size={18} color="#D83B01" /> },
+    { name: "MySQL", icon: <Database size={18} color="#00758F" /> },
   ];
 
   const adminSkills = [
+    { name: "Microsoft Office", icon: <Briefcase size={18} color="#D83B01" /> },
     { name: "Data Entry", icon: <FileText size={18} color="#10B981" /> },
-    { name: "Microsoft Excel", icon: <FileText size={18} color="#107C41" /> },
-    { name: "Microsoft Word", icon: <FileText size={18} color="#2B579A" /> },
     { name: "Document Processing", icon: <CheckCircle2 size={18} color="#3B82F6" /> },
     { name: "Archiving / Filing", icon: <FileText size={18} color="#64748B" /> },
     { name: "Data Administration", icon: <Database size={18} color="#8B5CF6" /> },

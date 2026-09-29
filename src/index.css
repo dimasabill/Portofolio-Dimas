@@ -58,7 +58,13 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 /* Custom Scrollbar */
@@ -88,13 +94,13 @@ ul {
 }
 
 .section-padding {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .section-title {
   font-size: 2rem;
   color: var(--text-main);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
