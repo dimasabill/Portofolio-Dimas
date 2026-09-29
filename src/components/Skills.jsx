@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
-import { Code2, Briefcase, FileCode2, Paintbrush, Database, FileText, CheckCircle2 } from 'lucide-react';
+import { Code2, Briefcase, FileCode2, Paintbrush, Database, FileText, CheckCircle2, Terminal } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = ({ id = "skills", title = "Skills" }) => {
   const technicalSkills = [
-    { name: "HTML", icon: <FileCode2 size={18} color="#E34F26" /> },
-    { name: "CSS", icon: <Paintbrush size={18} color="#1572B6" /> },
+    { name: "HTML & CSS", icon: <FileCode2 size={18} color="#E34F26" /> },
     { name: "JavaScript", icon: <FileCode2 size={18} color="#F7DF1E" /> },
     { name: "GitHub", icon: <FaGithub size={18} color="#181717" /> },
     { name: "Responsive Web Design", icon: <Code2 size={18} color="#38BDF8" /> },
     { name: "MySQL", icon: <Database size={18} color="#00758F" /> },
+    { name: "Prompt Engineering", icon: <Terminal size={18} color="#8B5CF6" /> },
   ];
 
   const adminSkills = [

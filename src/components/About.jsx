@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Calendar } from 'lucide-react';
+import fotoDimas from '../assets/foto-dimas.png';
 import './About.css';
 
 const About = () => {
@@ -9,9 +10,9 @@ const About = () => {
         <div className="section-title">
           <h2>About Me</h2>
         </div>
-        
+
         <div className="about-grid">
-          <motion.div 
+          <motion.div
             className="about-content"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,12 +20,12 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="about-text">
-              I am a professional with a keen interest in administration and technology, 
-              particularly in web development. I enjoy learning new things, solving problems 
+              I am a professional with a keen interest in administration and technology,
+              particularly in web development. I enjoy learning new things, solving problems
               systematically, and continuously improving my skills through various projects.
             </p>
             <p className="about-text">
-              Currently, I am focused on enhancing my capabilities in building modern web applications 
+              Currently, I am focused on enhancing my capabilities in building modern web applications
               as well as efficient data management and administrative processes.
             </p>
 
@@ -53,14 +54,14 @@ const About = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="about-image"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Workspace" className="workspace-img" />
+            <img src={fotoDimas} alt="Dimas Abil Fasha" className="workspace-img" />
           </motion.div>
         </div>
       </div>

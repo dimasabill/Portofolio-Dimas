@@ -13,7 +13,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-wrapper">
-            <motion.div 
+            <motion.div
               className="contact-info-section"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -22,10 +22,10 @@ const Contact = () => {
             >
               <h3 className="contact-subtitle">Let's Connect</h3>
               <p className="contact-desc">
-                I am open to new opportunities and collaborations. Don't hesitate 
+                I am open to new opportunities and collaborations. Don't hesitate
                 to reach out to me through any of the channels below.
               </p>
-              
+
               <div className="contact-links-list">
                 <a href="mailto:dimasabilfasha@gmail.com" className="contact-link-item">
                   <div className="contact-icon bg-blue"><Mail size={20} color="#2563EB" /></div>
@@ -34,12 +34,12 @@ const Contact = () => {
                     <span className="contact-link-value">dimasabilfasha@gmail.com</span>
                   </div>
                 </a>
-                
+
                 <a href="#" className="contact-link-item">
                   <div className="contact-icon bg-green"><FaWhatsapp size={20} color="#10B981" /></div>
                   <div className="contact-link-text">
                     <span className="contact-link-label">WhatsApp</span>
-                    <span className="contact-link-value">+62 812 3456 7890</span>
+                    <span className="contact-link-value">+62 877 7181 6654</span>
                   </div>
                 </a>
 
@@ -61,7 +61,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="contact-form-container card-shadow"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -71,7 +71,7 @@ const Contact = () => {
               <form action="https://formsubmit.co/dimasabilfasha@gmail.com" method="POST" className="contact-form">
                 <input type="hidden" name="_subject" value="New message from your Portfolio!" />
                 <input type="hidden" name="_captcha" value="false" />
-                
+
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input type="text" id="name" name="name" required placeholder="Enter your name" />
@@ -92,7 +92,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Footer Section matched to design */}
       <footer className="footer bg-hero">
         <div className="container footer-content">
