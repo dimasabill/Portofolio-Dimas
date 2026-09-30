@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dimasabill.github.io/Portofolio-DimasAbilFasha",
+  "homepage": "https://dimasabill.github.io/Portofolio-Dimas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
